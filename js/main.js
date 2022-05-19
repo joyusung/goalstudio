@@ -189,6 +189,7 @@ $(function(){
             autoplay: true,
             autoplaySpeed: 800,
         });
+
         var sw=0;
         $('section.shop .mobile_shop .more').click(function(){
             if(sw==0){
@@ -231,14 +232,14 @@ $(function(){
           clickable:true
         },
     });
-    // slick slider
-    $('.look').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
-    });
+    // // slick slider
+    // $('.look').slick({
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     fade: true,
+    //     cssEase: 'linear'
+    // });
     
     $('section.shop .tab_shop .box').hide();
     $('section.shop .tab_shop .box:first-child').show();
