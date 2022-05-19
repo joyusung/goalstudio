@@ -1,2 +1,2 @@
-# goalstudio1
+# goalstudio
 골스튜디오
