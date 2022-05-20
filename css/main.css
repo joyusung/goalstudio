@@ -2491,9 +2491,6 @@ footer .footer_bottom .footer_logo{
         height: 100%;
         background-color: #fff;
     }
-    section.shop .tab_header .mobile_shop .tab_menu1.active{
-        overflow: hidden;
-    }
     section.shop .tab_header .mobile_shop .tab_menu1 li{
         width: 100%;
         height: 100%;

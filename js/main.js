@@ -198,25 +198,32 @@ $(function(){
                 $(this).addClass('active');
             }else{
                 sw=0;
-                $('section.shop .mobile_shop .tab_menu1 li').stop().fadeOut();
+                $('section.shop .mobile_shop .tab_menu1 li').hide();
                 $(this).removeClass('active');
-                $('.mobilde_shop .tab_menu1').addClass('active');
+                $('section.shop .mobile_shop .tab_menu1 li:first').show();
             } 
         });
 
         $('section.shop .tab_header .tab_menu1 li').click(function(e){
             e.preventDefault();
-            $(this).removeClass('active');
-            var tab_Num=$(this).index();
-            $('section.shop .tab_shop .box').removeClass('active');
-            $('section.shop .tab_shop .box').eq(tab_Num).addClass('active');
-            $('section.shop .tab_shop .box').hide();
-            $('section.shop .tab_shop .box.active').show();
-            $('section.shop .tab_shop .box.active').css({
-                'animation':'opac 1.5s linear'
-            });
-            $('section.shop .mobile_shop .tab_menu1 li').stop().hide();
-            console.log(tab_Num);
+            $('.mobile_shop .more').removeClass('active');
+            if($('section.shop .tab_header .tab_menu li:first')==true){
+
+            }else{
+                $(this).removeClass('active');
+                var tab_Num=$(this).index();
+                $('section.shop .tab_shop .box').removeClass('active');
+                $('section.shop .tab_shop .box').eq(tab_Num).addClass('active');
+                $('section.shop .tab_shop .box').hide();
+                $('section.shop .tab_shop .box.active').show();
+                $('section.shop .tab_shop .box.active').css({
+                    'animation':'opac 1.5s linear'
+                });
+                $('section.shop .mobile_shop .tab_menu1 li').stop().hide();
+                $('section.shop .tab_shop .box.active').prependTo('section.shop .tab_shop');
+                $(this).prependTo('.mobile_shop .tab_menu1');
+                $('section.shop .mobile_shop .tab_menu1 li:first').show();
+            }
         });
     }
 
@@ -232,14 +239,6 @@ $(function(){
           clickable:true
         },
     });
-    // // slick slider
-    // $('.look').slick({
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     fade: true,
-    //     cssEase: 'linear'
-    // });
     
     $('section.shop .tab_shop .box').hide();
     $('section.shop .tab_shop .box:first-child').show();
