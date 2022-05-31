@@ -466,6 +466,9 @@ header .search_area .search_in i{
 /* pc버전에서는 메뉴 버튼 안보임 */
 header .menu_btn{display: none;}
 header .mobile_nav{display: none;}
+header .sub_link{
+    color: #ff0000;
+}
 
 /* 풀페이지 섹션*/
 /* fullpage의 navigation 중 마지막 li숨김 */

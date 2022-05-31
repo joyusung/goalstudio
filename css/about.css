@@ -1,0 +1,312 @@
+.about_bg{
+    background-image: url(../img/about_sub_bg.jpg);
+    background-attachment: fixed;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 760px;
+}
+.about_brand{
+    width: 100%;
+    background-color: #eee;
+}
+.about_brand h1{
+    font-family: 'Vitro_core';
+    position: absolute;
+    font-size: 70px;
+    top: -50px;
+    left: 0;
+    color: #ffa200;
+}
+.about_brand .about_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* 행기준 줄바꿈 허용 */
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+}
+.about_brand h1{
+    font-family: 'Vitro_core';
+    position: absolute;
+    font-size: 70px;
+    top: -50px;
+    left: 0;
+    color: #ffa200;
+}
+.about_brand .about_box .about1{
+    order: 1;
+    width: 50%;
+    margin-top: 150px;
+}
+.about_brand .about_box .about2{
+    order: 2;
+    width: 40%;
+    padding: 100px 0;
+    margin-top: 150px;
+}
+.about_brand .about_box .about3{
+    order: 3;
+    width: 30%;
+    padding: 80px 0;
+    margin: 100px 0;
+}
+.about_brand .about_box .about4{
+    order: 4;
+    width: 60%;
+    margin: 100px 0;
+}
+.about_brand .about_box h2{
+    font-size: 40px;
+    color: #36bac6;
+}
+.about_brand .about_box p{
+    line-height: 25px;
+    font-size: 16px;
+    color: #666;
+    margin-top: 30px;
+}
+.about_brand svg{
+    width: 0;
+    height: 0;
+    margin-top: 50px;
+}
+.clip1{
+    position: relative;
+    animation: border_ani1 5s infinite linear;
+    /* 애니메이션 실행방향: 반대방향<->순방향 */
+    /* animation-direction: alternate-reverse; */
+}
+@keyframes border_ani1{
+    0%{
+        clip-path: polygon(0% 5%, 95% 0, 100% 90%, 5% 100%);
+    }
+    25%{
+        clip-path: polygon(5% 0%, 95% 5%, 95% 90%, 5% 95%);
+    }
+    50%{
+        clip-path: polygon(0% 10%, 90% 0%, 100% 80%, 0 90%);
+    }
+    75%{
+        clip-path: polygon(10% 5%, 85% 10%, 100% 90%, 5% 100%);
+    }
+    90%{
+        clip-path: polygon(0% 5%, 100% 0, 95% 90%, 0 100%);
+    }
+    100%{
+        clip-path: polygon(0% 5%, 95% 0, 100% 90%, 5% 100%);
+    }
+}
+.clip2{
+    position: relative;
+    animation: border_ani2 5s infinite linear;
+}
+@keyframes border_ani2{
+    0%{
+        clip-path: polygon(0% 5%, 95% 0, 90% 90%, 5% 95%);
+    }
+    25%{
+        clip-path: polygon(10% 0%, 90% 5%, 90% 85%, 5% 90%);
+    }
+    50%{
+        clip-path: polygon(5% 10%, 90% 0%, 90% 95%, 0 85%);
+    }
+    75%{
+        clip-path: polygon(0% 0%, 95% 5%, 95% 90%, 5% 90%);
+    }
+    90%{
+        clip-path: polygon(5% 5%, 95% 0, 90% 90%, 0 95%);
+    }
+    100%{
+        clip-path: polygon(0% 5%, 95% 0, 90% 90%, 5% 95%);
+    }
+}
+
+
+.about_icon{
+    width: 100%;
+}
+.about_icon ul{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 100px;
+}
+.about_icon ul h1{
+    font-size: 50px;
+    color: #ff5e44;
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Vitro_core';
+}
+.about_icon ul li{
+    width: 33%;
+    padding: 0 130px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    margin-bottom: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.about_icon ul li:nth-last-child(3n+1){
+    border:none
+}
+.about_icon ul li:nth-child(6) img{
+    width: 160px;
+}
+.about_icon ul li:nth-child(6) p{
+    margin-top: 30px;
+}
+.about_icon ul li p{
+    white-space: nowrap;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 노트북 : max-width:1600px */
+@media screen and (max-width:1280px){
+    .about_bg{
+        height: 500px;
+        background-position-y: -200px;
+    }
+    .about_brand .about_box{
+        width: 1000px;
+    }
+    .about_brand .about_box p{
+        line-height: 24px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
+/* 태블릿 : max-width:1024px, max-width: 768px */
+@media screen and (max-width:1024px){
+   
+}
+@media screen and (max-width:768px){
+    .about_bg{
+        height: 400px;
+        background-position-y: -300px;
+    }
+    .about_brand .about_box{
+        width: 80%;
+    }
+    .about_brand h1{
+        font-size: 40px;
+        top: -20px;
+        left: 50%;
+        transform: translatex(-50%);
+        white-space: nowrap;
+    }
+    .about_brand .about_box p{
+        line-height: 24px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .about_brand .about_box{
+        flex-flow: column nowrap;
+    }
+    .about_brand .about_box .about1{
+        order: 1;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .about_brand .about_box .about2{
+        order: 2;
+        width: 100%;
+        padding: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .about_brand .about_box .about3{
+        order: 4;
+        width: 100%;
+        padding: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .about_brand .about_box .about4{
+        order: 3;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+    .about_brand .about_box h2{
+        font-size: 50px;
+    }
+    .about_brand .about_box p{
+        line-height: 30px;
+        font-size: 20px;
+
+    }
+    .clip1{
+        animation: none;
+    }
+    .clip2{
+        animation: none;
+    }
+    .about_icon ul{
+        width: 80%;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    .about_icon ul li{
+        width: 48%;
+        height: 300px;
+        padding: 0 60px;
+        border-right: none;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width:480px){
+    .about_bg{
+        height: 300px;
+        background-position-y: -200px;
+    }
+    .about_brand .about_box{
+        width: 94%;
+    }
+    .about_brand h1{
+        font-size: 30px;
+        top: -25px;
+    }
+    .about_brand svg{
+        margin-top: 0;
+    }
+    .about_brand .about_box .about1{
+        margin-top: 30px;
+    }
+    .about_brand .about_box h2{
+        font-size: 30px;
+    }
+    .about_brand .about_box p{
+        line-height: 24px;
+        font-size: 14px;
+    }
+    .about_icon ul h1{
+        font-size: 30px;
+        top: -20px;
+    }
+    .about_icon ul li{
+        height: 200px;
+        padding: 0 30px;
+        margin-bottom: 30px;
+    }
+    .about_icon ul li:nth-child(6) img{
+        width: 100px;
+    }
+    .about_icon ul li p{
+        font-size: 10px;
+    }
+}
